@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Display another column to indicate if it is useful to use the -20% premium version.
 // @author       MEMEN
-// @match        https://es79.guerrastribales.es/game.php?village=6277&screen=main
+// @match        *screen=main
 // @icon         <$ICON$>
 // @grant        none
 // ==/UserScript==
