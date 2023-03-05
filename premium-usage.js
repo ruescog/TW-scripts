@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Display another column to indicate if it is useful to use the -20% premium version.
 // @author       MEMEN
-// @match        *screen=main
+// @match        https://*.guerrastribales.es/*&screen=main
 // @icon         <$ICON$>
 // @grant        none
 // ==/UserScript==
