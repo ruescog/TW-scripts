@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         premium-usage
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Display another column to indicate if it is useful to use the -20% premium version.
 // @author       MEMEN
 // @match        https://*.guerrastribales.es/*&screen=main
@@ -19,7 +19,7 @@
     header.innerText = "Use the\n-20% option?"
     buildingsTable.firstChild.appendChild(header)
 
-    for(var i = 1, n = 12; i < n; i++){
+    for(var i = 1, n = buildingsTable.childElementCount; i < n; i++){
         var element = buildingsTable.children[i]
         var totalResourceCost = element.childElementCount == 7 ? parseInt(element.children[1].innerText) + parseInt(element.children[2].innerText) + parseInt(element.children[3].innerText) : null
         var resultIcon = document.createElement("td")
