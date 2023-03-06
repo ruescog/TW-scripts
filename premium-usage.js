@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         premium-usage
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  Display another column to indicate if it is useful to use the -20% premium version.
 // @author       MEMEN
 // @match        https://*.guerrastribales.es/*&screen=main
