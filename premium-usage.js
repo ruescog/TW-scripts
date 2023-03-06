@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         premium-usage
 // @namespace    http://tampermonkey.net/
-// @version      0.5
+// @version      0.6
 // @description  Display another column to indicate if it is useful to use the -20% premium version.
 // @author       MEMEN
 // @match        https://*.guerrastribales.es/*&screen=main
@@ -19,16 +19,21 @@
     }
     
     var updateButton = document.createElement("img")
-    updateButton.scr = "https://dses.innogamescdn.com/asset/59fb2ca0/graphic/buildings/market.png"
+    updateButton.src = "https://dses.innogamescdn.com/asset/59fb2ca0/graphic/buildings/market.png"
+    updateButton.title = "Update PP value"
     updateButton.onclick = function(){
         ppAValue = prompt("PP average value: ")
         sessionStorage.setItem("ppAValue", ppAValue)
         location.reload()
     }
     
+    var spanPremium = document.createElement("span")
+    spanPremium.classList.add("icon") ; spanPremium.classList.add("header") ; spanPremium.classList.add("premium")
+    
     var buildingsTable = document.getElementById("buildings").firstElementChild
     var header = document.createElement("th")
     
+    header.appendChild(spanPremium)
     header.appendChild(updateButton)
     buildingsTable.firstChild.appendChild(header)
 
