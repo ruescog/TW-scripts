@@ -20,7 +20,18 @@
     
     var buildingsTable = document.getElementById("buildings").firstElementChild
     var header = document.createElement("th")
-    header.innerText = "Use the\n-20% option?"
+    header.innerText = "Use the -20% option?"
+    
+    var updateButton = document.createElement("img")
+    updateButton.src = "https://dses.innogamescdn.com/asset/59fb2ca0/graphic/buildings/market.png"
+    updateButton.title = "Update PP value"
+    updateButton.onclick = function(){
+        ppAValue = prompt("PP average value: ")
+        sessionStorage.setItem("ppAValue", ppAValue)
+        location.reload()
+    }
+    
+    header.appendChild(updateButton)
     buildingsTable.firstChild.appendChild(header)
 
     for(var i = 1, n = buildingsTable.childElementCount; i < n; i++){
