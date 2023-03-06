@@ -18,17 +18,20 @@
         sessionStorage.setItem("ppAValue", ppAValue)
     }
     
-    var updateButton = document.createElement("img")
-    updateButton.src = "https://dses.innogamescdn.com/asset/59fb2ca0/graphic/buildings/market.png"
-    updateButton.title = "Update PP value"
-    updateButton.onclick = function(){
+    function update(){
         ppAValue = prompt("PP average value: ")
         sessionStorage.setItem("ppAValue", ppAValue)
         location.reload()
     }
     
+    var updateButton = document.createElement("img")
+    updateButton.src = "https://dses.innogamescdn.com/asset/59fb2ca0/graphic/buildings/market.png"
+    updateButton.title = "Update PP value"
+    updateButton.onclick = update
+    
     var spanPremium = document.createElement("span")
     spanPremium.classList.add("icon") ; spanPremium.classList.add("header") ; spanPremium.classList.add("premium")
+    spanPremium.onclick = update
     
     var buildingsTable = document.getElementById("buildings").firstElementChild
     var header = document.createElement("th")
