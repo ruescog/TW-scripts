@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  It does scavenges automatically and also unlock them when possible.
 // @author       MEMEN
-// @match        https://*.guerrastribales.es/*&screen=place&mode=scavenge
+// @match        https://*.guerrastribales.es/*&screen=place&mode=scavenge*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -51,5 +51,5 @@
             $("a.unlock-button").first().click()
             $("a.btn-default").last().click()
         }
-    }, 10000)
+    }, 2000)
 })();
