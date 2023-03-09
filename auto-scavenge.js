@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AutoScavenge
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  It does scavenges automatically and also unlock them when possible.
 // @author       MEMEN
 // @match        https://*.guerrastribales.es/*&screen=place&mode=scavenge*
