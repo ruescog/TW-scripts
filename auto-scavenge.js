@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AutoScavenge
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  It does scavenges automatically and also unlock them when possible.
 // @author       MEMEN
 // @match        https://*.guerrastribales.es/*&screen=place&mode=scavenge*
@@ -32,11 +32,11 @@
 
         for(option in ScavengeScreen.village.options){
             recolection = ScavengeScreen.village.options[option]
-            unlockable = true
+            var unlockable = true
 
             if(recolection.is_locked){
                 for(key in ScavengeScreen.village.res){
-                    if(recolection.is_locked && ScavengeScreen.village.res[key] < recolection.base.unlock_cost[key]){
+                    if(ScavengeScreen.village.res[key] < recolection.base.unlock_cost[key]){
                         unlockable = false
                     }
                 }
